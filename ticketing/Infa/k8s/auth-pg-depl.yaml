@@ -18,6 +18,10 @@ spec:
           env:
             - name: POSTGRES_PASSWORD
               value: durgakiran
+            - name: POSTGRES_USER
+              value: durgakiran
+            - name: POSTGRES_DB
+              value: users
 ---
 apiVersion: v1
 kind: Service

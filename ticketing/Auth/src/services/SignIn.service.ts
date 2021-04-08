@@ -5,6 +5,7 @@ import { RequestValidationError } from "../errors/req-validation-error";
 import { ServerError } from "../errors/server-error";
 import { findUserByEmail } from "./FindUser.service";
 import { comparePasswords } from "./password.service";
+import jsonwebtoken from "jsonwebtoken";
 
 export default async function SingInService(req: Request, res: Response, next: NextFunction) {
     try {
@@ -18,10 +19,11 @@ export default async function SingInService(req: Request, res: Response, next: N
         
 
         try {
-            if(comparePasswords(result.password, password)) {
-                res.send({ loggedIn: true, email, name: result.name });
+            if(await comparePasswords(result.password, password)) {
+                const token = jsonwebtoken.sign({email }, 'shhh');
+                res.send({ token: token, email, name: result.name });
             } else {
-                res.send({ loggedIn: false });
+                res.status(403).end();
             }
         } catch (e) {
             console.log(e);
