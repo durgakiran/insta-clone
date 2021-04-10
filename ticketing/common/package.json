@@ -1,6 +1,6 @@
 {
   "name": "@durgakiran-org/common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.js",
@@ -8,7 +8,7 @@
     "build/**/*"
   ],
   "scripts": {
-    "clean": "del ./build/*",
+    "clean": "del-cli ./build/*",
     "build": "npm run clean && tsc"
   },
   "keywords": [],
