@@ -4,11 +4,9 @@ import { currentUserRouter } from './routes/current-user';
 import { signInRouter } from './routes/signin';
 import { signOutRouter } from './routes/singout';
 import { signUpRouter } from './routes/signup';
-import { errorHandler } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
 import cors from "cors";
 import { clientDB } from './db';
-import { DatabaseConnectionError } from './errors/database-connection-error';
+import { DatabaseConnectionError, errorHandler, NotFoundError } from '@durgakiran-org/common';
 
 const app = express();
 app.use(json());
