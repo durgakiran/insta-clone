@@ -4,3 +4,4 @@ export * from './database-connection-error';
 export * from './not-found-error';
 export * from './req-validation-error';
 export * from './server-error';
+export * from './not-authorised.error';

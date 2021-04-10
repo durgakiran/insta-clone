@@ -16,3 +16,4 @@ __exportStar(require("./database-connection-error"), exports);
 __exportStar(require("./not-found-error"), exports);
 __exportStar(require("./req-validation-error"), exports);
 __exportStar(require("./server-error"), exports);
+__exportStar(require("./not-authorised.error"), exports);
