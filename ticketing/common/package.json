@@ -1,6 +1,6 @@
 {
   "name": "@durgakiran-org/common",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.js",
@@ -16,6 +16,11 @@
   "license": "ISC",
   "devDependencies": {
     "del-cli": "^3.0.1",
+    "@types/express": "^4.17.11",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0"
   }
 }
